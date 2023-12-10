@@ -11,14 +11,18 @@
 		2435DC7E2B25F6F50009E468 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435DC7D2B25F6F50009E468 /* ContentView.swift */; };
 		2435DC802B25F6F60009E468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2435DC7F2B25F6F60009E468 /* Assets.xcassets */; };
 		2435DC832B25F6F60009E468 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2435DC822B25F6F60009E468 /* Preview Assets.xcassets */; };
+		A79D0A4BB5DBFE4BAB0EA5B9 /* Pods_CI_CD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFEB09D93FD2F1F6E330347 /* Pods_CI_CD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1853DE5AD1D960958681C0F0 /* Pods-CI-CD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CI-CD.debug.xcconfig"; path = "Target Support Files/Pods-CI-CD/Pods-CI-CD.debug.xcconfig"; sourceTree = "<group>"; };
 		2435DC782B25F6F50009E468 /* CI-CD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CI-CD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2435DC7B2B25F6F50009E468 /* CI_CDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CI_CDApp.swift; sourceTree = "<group>"; };
 		2435DC7D2B25F6F50009E468 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2435DC7F2B25F6F60009E468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2435DC822B25F6F60009E468 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3CFEB09D93FD2F1F6E330347 /* Pods_CI_CD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CI_CD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55525EC17A8DD4940FCBF4DA /* Pods-CI-CD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CI-CD.release.xcconfig"; path = "Target Support Files/Pods-CI-CD/Pods-CI-CD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A79D0A4BB5DBFE4BAB0EA5B9 /* Pods_CI_CD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,8 @@
 			children = (
 				2435DC7A2B25F6F50009E468 /* CI-CD */,
 				2435DC792B25F6F50009E468 /* Products */,
+				65F3FF317CFEB88C30FB3DE1 /* Pods */,
+				9C5CAA2279A08D190AA04F1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		65F3FF317CFEB88C30FB3DE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1853DE5AD1D960958681C0F0 /* Pods-CI-CD.debug.xcconfig */,
+				55525EC17A8DD4940FCBF4DA /* Pods-CI-CD.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C5CAA2279A08D190AA04F1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CFEB09D93FD2F1F6E330347 /* Pods_CI_CD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2435DC862B25F6F60009E468 /* Build configuration list for PBXNativeTarget "CI-CD" */;
 			buildPhases = (
+				088E32A5765609D7246A440B /* [CP] Check Pods Manifest.lock */,
 				2435DC742B25F6F50009E468 /* Sources */,
 				2435DC752B25F6F50009E468 /* Frameworks */,
 				2435DC762B25F6F50009E468 /* Resources */,
@@ -131,6 +156,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		088E32A5765609D7246A440B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CI-CD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2435DC742B25F6F50009E468 /* Sources */ = {
@@ -261,11 +311,13 @@
 		};
 		2435DC872B25F6F60009E468 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1853DE5AD1D960958681C0F0 /* Pods-CI-CD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"CI-CD/Preview Content\"";
 				DEVELOPMENT_TEAM = 553TYVZR7V;
 				ENABLE_PREVIEWS = YES;
@@ -290,6 +342,7 @@
 		};
 		2435DC882B25F6F60009E468 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55525EC17A8DD4940FCBF4DA /* Pods-CI-CD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
